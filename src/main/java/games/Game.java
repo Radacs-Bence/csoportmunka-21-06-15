@@ -29,4 +29,11 @@ public class Game {
     public int getSecondCountryScore() {
         return secondCountryScore;
     }
+
+    public String winner(){
+        if (firstCountryScore == secondCountryScore){
+            return "Draw";
+        }
+       return firstCountryScore > secondCountryScore ? firstCountry : secondCountry;
+    }
 }
