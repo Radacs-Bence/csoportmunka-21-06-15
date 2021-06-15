@@ -11,4 +11,10 @@ class GameTest {
         Game game = new Game("a", "b", 1, 2);
         assertEquals("b", game.winner());
     }
+
+    @Test
+    void drawTest() {
+        Game game = new Game("a", "b", 1, 1);
+        assertEquals("Draw", game.winner());
+    }
 }
