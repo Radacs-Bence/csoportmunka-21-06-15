@@ -30,11 +30,15 @@ public class Game {
         return secondCountryScore;
     }
 
-    public String winner(){
-        if (firstCountryScore == secondCountryScore){
+    public String winner() {
+        if (firstCountryScore == secondCountryScore) {
             return "Draw";
         }
-       return firstCountryScore > secondCountryScore ? firstCountry : secondCountry;
+        return firstCountryScore > secondCountryScore ? firstCountry : secondCountry;
     }
 
+    public static Game createGameFromLine(String line) {
+        String[] lineArr = line.split(";");
+        return new Game(lineArr[0], lineArr[1], Integer.parseInt(lineArr[2]), Integer.parseInt(lineArr[3]));
+    }
 }
