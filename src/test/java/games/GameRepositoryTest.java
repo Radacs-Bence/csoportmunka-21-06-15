@@ -27,6 +27,7 @@ class GameRepositoryTest {
     }
 
     @Test
-    void addGameFromCsv() {
+    void addGameFromCsvTest() {
+        gameRepository.addGameFromCsv("src/main/resources/results.csv");
     }
 }
