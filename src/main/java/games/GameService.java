@@ -1,6 +1,10 @@
 package games;
 
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Stream;
 
 public class GameService {
 
@@ -29,4 +33,10 @@ public class GameService {
 
         return result;
     }
+
+    public String mostGoalsCountry(){
+        return gameRepository.getGames().stream()
+                .flatMap(game -> Stream.of(game.getFirstCountry(), game.getSecondCountry()))
+                .max(Comparator.comparing(this::allGoalsOfCountry)).get();
+        }
 }
