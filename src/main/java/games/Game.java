@@ -7,4 +7,5 @@ public class Game {
     private int firstCountryScore;
     private int secondCountryScore;
 
+
 }
