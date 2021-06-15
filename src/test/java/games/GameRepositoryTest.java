@@ -22,6 +22,8 @@ class GameRepositoryTest {
         gameRepository.addGame(game1);
         gameRepository.addGame(game2);
 
+        assertEquals(2, gameRepository.getGames().size());
+
     }
 
     @Test
