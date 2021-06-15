@@ -21,7 +21,9 @@ class GameServiceTest {
     }
 
     @Test
-    void allGoalsOfCountry() {
+    void allGoalsOfCountryTest() {
+        int result = gameService.allGoalsOfCountry("Italy");
+        assertEquals(5, result);
     }
 
     @Test
