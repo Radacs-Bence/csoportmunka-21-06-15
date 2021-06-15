@@ -10,7 +10,7 @@ class GameRepositoryTest {
     GameRepository gameRepository;
 
     @BeforeEach
-    void init(){
+    void init() {
         gameRepository = new GameRepository();
     }
 
@@ -23,7 +23,7 @@ class GameRepositoryTest {
         gameRepository.addGame(game2);
 
         assertEquals(2, gameRepository.getGames().size());
-
+        assertEquals("Portugal", gameRepository.getGames().get(0).getSecondCountry());
     }
 
     @Test
