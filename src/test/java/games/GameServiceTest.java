@@ -28,6 +28,7 @@ class GameServiceTest {
     void largestGoalDiff() {
         Game game = gameService.largestGoalDiff();
         assertEquals("Antigua", game.getFirstCountry());
+        assertEquals(0,game.getSecondCountryScore());
     }
 
     @Test

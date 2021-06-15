@@ -17,4 +17,10 @@ class GameTest {
         Game game = new Game("a", "b", 1, 1);
         assertEquals("Draw", game.winner());
     }
+
+    @Test
+    void createGameFromLine() {
+        Game game = Game.createGameFromLine("French;Germany;2;2");
+        assertEquals("Germany", game.getSecondCountry());
+    }
 }

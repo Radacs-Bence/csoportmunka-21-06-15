@@ -30,5 +30,6 @@ class GameRepositoryTest {
     void addGameFromCsvTest() {
         gameRepository.addGameFromCsv("src/main/resources/results.csv");
         assertEquals("Italy", gameRepository.getGames().get(14).winner());
+        assertEquals(2, gameRepository.getGames().get(6).getSecondCountryScore());
     }
 }
