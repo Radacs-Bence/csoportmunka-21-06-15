@@ -15,7 +15,6 @@ class GameServiceTest {
 
     GameService gameService;
 
-
     @BeforeEach
     void init() {
         GameRepository gameRepository = new GameRepository();
@@ -32,7 +31,7 @@ class GameServiceTest {
     }
 
     @Test
-    void allGoalsOfCountryTest(String country) {
+    void allGoalsOfCountryTest() {
         int result = gameService.allGoalsOfCountry("Italy");
         assertEquals(5, result);
     }
