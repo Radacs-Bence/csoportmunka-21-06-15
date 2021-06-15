@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class GameTest {
 
     @Test
-    void winner() {
+    void winnerTest() {
+        Game game = new Game("a", "b", 1, 2);
+        assertEquals("b", game.winner());
     }
 }
