@@ -10,4 +10,8 @@ public class GameRepository {
     public List<Game> getGames() {
         return new ArrayList<>(games);
     }
+
+    public void addGame(Game game){
+        games.add(game);
+    }
 }
