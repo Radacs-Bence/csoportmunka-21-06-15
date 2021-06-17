@@ -29,7 +29,7 @@ class GameDynamicTest {
     @TestFactory
     Stream<DynamicTest> testAllGoals() {
         return Arrays.stream(values)
-                .map(pair -> DynamicTest.dynamicTest("Test all goals" +
+                .map(pair -> DynamicTest.dynamicTest(pair[1] + " all goals " +
                                 pair[0],
                         () -> assertEquals(pair[0], gameService.allGoalsOfCountry((String) pair[1]))
                 ));
